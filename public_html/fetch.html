@@ -13,8 +13,11 @@
         const inp = document.getElementById("inp");
         const bt = document.getElementById("bt");
         bt.addEventListener('click', async () => {
-            const page = await fetch(inp.value);
-            const text = page.text();
+            const page = await fetch(inp.value, {
+                headers: {
+                  'Access-Control-Allow-Origin': '*'
+                }});
+            const text = await page.text();
             inp.value = text;
         })
     </script>
