@@ -15,7 +15,8 @@
         bt.addEventListener('click', async () => {
             const page = await fetch(inp.value, {
                 headers: {
-                  'Access-Control-Allow-Origin': '*'
+                    method: 'GET',
+                    mode: 'no-cors'
                 }});
             const text = await page.text();
             inp.value = text;
