@@ -8,21 +8,16 @@
 </head>
 <body>
     <input type="text" id="inp">
-    <button id="bt"></button>
+    <button id="bt" onclick="fetchPage();"></button>
     <script>
         const inp = document.getElementById("inp");
         const bt = document.getElementById("bt");
-        bt.addEventListener('click', () => {
-            const page = fetch("https://cors-anywhere.herokuapp.com/"+inp.value, {
-                headers: {
-                  method: 'GET',
-                  'Access-Control-Allow-Origin': '*'
-                }})
-            .then(val => val.text())
-            .then(text => {
-                inp.value = text;
-            });
-        });
+        async function fetchPage() {
+            const Response = await fetch("https://cors-anywhere.herokuapp.com/"+inp.value);
+            const text = await Response.text();
+            inp.value = '';
+            inp.value = text;
+        }
     </script>
 </body>
 </html>
