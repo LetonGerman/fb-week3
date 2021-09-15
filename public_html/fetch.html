@@ -13,7 +13,7 @@
         const inp = document.getElementById("inp");
         const bt = document.getElementById("bt");
         bt.addEventListener('click', async () => {
-            const page = await fetch(inp.value, {
+            const page = await fetch("https://cors-anywhere.herokuapp.com/"+inp.value, {
                 headers: {
                   method: 'GET',
                   'Access-Control-Allow-Origin': '*'
