@@ -14,11 +14,23 @@
       "X-Author": "neveraskedfor",
       "Content-Type": "text/plain; charset=UTF-8",
       "Access-Control-Allow-Origin": "*"
+    },
+    "/promise/*": {
+      "X-Author": "neveraskedfor",
+      "Content-Type": "text/plain; charset=UTF-8",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "/fetch/**": {
+      "X-Author": "neveraskedfor",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Access-Control-Allow-Origin": "*"
     }
   },
   "clean_urls": true,
   "routes": {
     "/login/**": "index.html",
-    "/sample/**": "sample"
+    "/sample/**": "sample",
+    "/promise/**": "promise",
+    "/fetch/**": "fetch.html"
   }
 }
