@@ -13,9 +13,8 @@
         const inp = document.getElementById("inp");
         const bt = document.getElementById("bt");
         async function fetchPage() {
-            const Response = await fetch("https://cors-anywhere.herokuapp.com/"+inp.value);
+            const Response = await fetch(inp.value);
             const text = await Response.text();
-            inp.value = '';
             inp.value = text;
         }
     </script>
