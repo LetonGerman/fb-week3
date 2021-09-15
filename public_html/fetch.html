@@ -17,12 +17,12 @@
                 headers: {
                   method: 'GET',
                   'Access-Control-Allow-Origin': '*'
-                }});
-            })
+                }})
             .then(val => val.text())
             .then(text => {
                 inp.value = text;
             });
+        });
     </script>
 </body>
 </html>
